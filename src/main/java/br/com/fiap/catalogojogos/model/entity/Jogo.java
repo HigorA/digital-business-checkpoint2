@@ -1,5 +1,7 @@
 package br.com.fiap.catalogojogos.model.entity;
 
+import br.com.fiap.catalogojogos.model.dto.AtualizarJogo;
+import br.com.fiap.catalogojogos.model.dto.CadastroJogo;
 import br.com.fiap.catalogojogos.model.enums.Genero;
 import jakarta.persistence.*;
 
@@ -7,43 +9,84 @@ import java.io.Serial;
 import java.io.Serializable;
 
 @Entity
-public class CatalogoJogo implements Serializable {
+public class Jogo implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column
     private String titulo;
+
+    @Column
     private String desenvolvedora;
+
+    @Column
     private String distribuidora;
+
+    @Column
     private String idiomas;
+
     @Column(name = "numero_jogadores")
     private Integer numeroJogadores;
+
     @Column(name = "data_lancamento")
     private String dataLancamento;
+
+    @Enumerated(EnumType.STRING)
     private Genero genero;
+
+    @Embedded
     private RequisitosSistema requisitosSistema;
 
-    public CatalogoJogo() {
+    @Column
+    private Boolean ativo;
+
+    public Jogo() {
     }
 
-    public CatalogoJogo(String titulo,
-                        String desenvolvedora,
-                        String distribuidora,
-                        String idiomas,
-                        Integer numeroJogadores,
-                        String dataLancamento,
-                        Genero genero,
-                        RequisitosSistema requisitosSistema)
-    {
-        this.titulo = titulo;
-        this.desenvolvedora = desenvolvedora;
-        this.distribuidora = distribuidora;
-        this.idiomas = idiomas;
-        this.numeroJogadores = numeroJogadores;
-        this.dataLancamento = dataLancamento;
-        this.genero = genero;
-        this.requisitosSistema = requisitosSistema;
+    public Jogo(CadastroJogo jogo) {
+        this.ativo = true;
+        this.titulo = jogo.titulo();
+        this.desenvolvedora = jogo.desenvolvedora();
+        this.distribuidora = jogo.distribuidora();
+        this.idiomas = jogo.idiomas();
+        this.numeroJogadores = jogo.numeroJogadores();
+        this.dataLancamento = jogo.dataLancamento();
+        this.genero = jogo.genero();
+        this.requisitosSistema = new RequisitosSistema(jogo.dadosRequisitosSistema());
+    }
+
+    public void excluir() {
+        this.ativo = false;
+    }
+
+    public void atualizarInformacoes(AtualizarJogo atualizarJogo) {
+        if (atualizarJogo.titulo() != null) {
+            this.titulo = atualizarJogo.titulo();
+        }
+        if (atualizarJogo.desenvolvedora() != null) {
+            this.desenvolvedora = atualizarJogo.desenvolvedora();
+        }
+        if (atualizarJogo.distribuidora() != null) {
+            this.distribuidora = atualizarJogo.distribuidora();
+        }
+        if (atualizarJogo.idiomas() != null) {
+            this.idiomas = atualizarJogo.idiomas();
+        }
+        if (atualizarJogo.numeroJogadores() != null) {
+            this.numeroJogadores = atualizarJogo.numeroJogadores();
+        }
+        if (atualizarJogo.dataLancamento() != null) {
+            this.dataLancamento = atualizarJogo.dataLancamento();
+        }
+        if (atualizarJogo.genero() != null) {
+            this.genero = atualizarJogo.genero();
+        }
+        if (atualizarJogo.dadosRequisitosSistema() != null) {
+            this.requisitosSistema.atualizarRequsitos(atualizarJogo.dadosRequisitosSistema());
+        }
     }
 
     public Long getId() {

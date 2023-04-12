@@ -1,32 +1,57 @@
 package br.com.fiap.catalogojogos.model.entity;
 
+import br.com.fiap.catalogojogos.model.dto.DadosRequisitosSistema;
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+
 import java.io.Serial;
 import java.io.Serializable;
 
+@Embeddable
 public class RequisitosSistema implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 
+    @Column
     private String sistemaOperacional;
+    @Column
     private String processador;
+    @Column
     private String memoria;
+    @Column
     private String placaDeVideo;
+    @Column
     private String armazenamento;
 
     public RequisitosSistema() {
     }
 
-    public RequisitosSistema(String sistemaOperacional,
-                             String processador,
-                             String memoria,
-                             String placaDeVideo,
-                             String armazenamento)
-    {
-        this.sistemaOperacional = sistemaOperacional;
-        this.processador = processador;
-        this.memoria = memoria;
-        this.placaDeVideo = placaDeVideo;
-        this.armazenamento = armazenamento;
+    public RequisitosSistema(DadosRequisitosSistema dadosRequisitosSistema) {
+        this.sistemaOperacional = dadosRequisitosSistema.sistemaOperacional();
+        this.processador = dadosRequisitosSistema.processador();
+        this.memoria = dadosRequisitosSistema.memoria();
+        this.placaDeVideo = dadosRequisitosSistema.placaDeVideo();
+        this.armazenamento = dadosRequisitosSistema.armazenamento();
+    }
+
+    public void atualizarRequsitos(DadosRequisitosSistema dadosRequisitosSistema) {
+        if (dadosRequisitosSistema.sistemaOperacional() != null) {
+            this.sistemaOperacional = dadosRequisitosSistema.sistemaOperacional();
+        }
+        if (dadosRequisitosSistema.processador() != null) {
+            this.processador = dadosRequisitosSistema.processador();
+        }
+        if (dadosRequisitosSistema.memoria() != null) {
+            this.memoria = dadosRequisitosSistema.memoria();
+        }
+        if (dadosRequisitosSistema.placaDeVideo() != null) {
+            this.placaDeVideo = dadosRequisitosSistema.placaDeVideo();
+        }
+        if (dadosRequisitosSistema.armazenamento() != null) {
+            this.armazenamento = dadosRequisitosSistema.armazenamento();
+        }
+
+
     }
 
     public String getSistemaOperacional() {
