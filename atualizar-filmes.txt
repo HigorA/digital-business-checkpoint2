@@ -1,0 +1,20 @@
+<!-- Higor Alves Santos RM93359 -->
+
+1º
+{
+    "id": 1,
+    "idiomas": "Português - Brasil, Inglês, Francês e mais 17",
+    "genero": "TIRO",
+    "dadosRequisitosSistema": {
+		"processador": "Intel Core i5-2400 @ 3.1 GHz or AMD FX-6300 @ 3.5 GHz or equivalent",
+		"placaDeVideo": "NVIDIA GeForce GTX 670 or AMD R9 270"
+	}
+}
+
+2º
+{
+    "id": 2,
+    "titulo": "RDR (Red Dead Redemption) 2",
+    "numeroJogadores": 2,
+    "genero": "TIRO"
+}

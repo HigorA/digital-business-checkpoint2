@@ -1,7 +1,9 @@
+// Higor Alves Santos RM93359
 package br.com.fiap.catalogojogos.service;
 
 import br.com.fiap.catalogojogos.model.dto.AtualizarJogo;
 import br.com.fiap.catalogojogos.model.dto.CadastroJogo;
+import br.com.fiap.catalogojogos.model.dto.DeletarJogo;
 import br.com.fiap.catalogojogos.model.dto.ListagemJogo;
 import br.com.fiap.catalogojogos.model.entity.Jogo;
 import br.com.fiap.catalogojogos.repositories.JogoRepository;
@@ -36,8 +38,8 @@ public class JogoService {
         jogo.atualizarInformacoes(atualizarJogo);
     }
 
-    public void exclusaoLogica(Long id) {
-        System.out.println(id);
+    public void exclusaoLogica(DeletarJogo deletarJogo) {
+        Long id = deletarJogo.id();
         Jogo jogo = jogoRepository.getReferenceById(id);
         jogo.excluir();
 

@@ -1,0 +1,19 @@
+<!-- Higor Alves Santos RM93359 -->
+
+CREATE TABLE `jogo` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `ativo` bit(1) DEFAULT NULL,
+  `data_lancamento` varchar(255) DEFAULT NULL,
+  `desenvolvedora` varchar(255) DEFAULT NULL,
+  `distribuidora` varchar(255) DEFAULT NULL,
+  `genero` varchar(255) DEFAULT NULL,
+  `idiomas` varchar(255) DEFAULT NULL,
+  `numero_jogadores` int DEFAULT NULL,
+  `armazenamento` varchar(255) DEFAULT NULL,
+  `memoria` varchar(255) DEFAULT NULL,
+  `placa_de_video` varchar(255) DEFAULT NULL,
+  `processador` varchar(255) DEFAULT NULL,
+  `sistema_operacional` varchar(255) DEFAULT NULL,
+  `titulo` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);

@@ -1,3 +1,4 @@
+// Higor Alves Santos RM93359
 package br.com.fiap.catalogojogos.model.entity;
 
 import br.com.fiap.catalogojogos.model.dto.DadosRequisitosSistema;

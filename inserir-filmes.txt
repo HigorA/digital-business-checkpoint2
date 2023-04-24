@@ -1,0 +1,92 @@
+<!-- Higor Alves Santos RM93359 -->
+
+1º
+{
+    "titulo": "Far Cry 5",
+    "desenvolvedora": "Ubisoft Montreal, Red Storm, Ubisoft Shanghai, Ubisoft Toronto, Ubisoft Kiev",
+    "distribuidora": "Ubisoft",
+    "idiomas": "pt-br, Inglês, Francês e mais 17",
+    "numeroJogadores": 1,
+    "dataLancamento": "2018",
+    "genero": "ACAO",
+    "dadosRequisitosSistema": {
+		"sistemaOperacional": "Windows 8.1, Windows 10 (64-bit apenas)",
+		"processador": "Intel Core i7-4770 @ 3.4 GHz ou AMD Ryzen 5 1600 @ 3.2 GHz ou equivalente",
+		"memoria": "8 GB",
+		"placaDeVideo": "NVIDIA GeForce GTX 970 or AMD R9 290X (minimo 4GB)",
+		"armazenamento": "40 GB"
+	}
+}
+
+2º
+{
+    "titulo": "Red Dead Redemption 2",
+    "desenvolvedora": "Rockstar Games",
+    "distribuidora": "Rockstar Games",
+    "idiomas": "Inglês, Francês, Italiano, Alemão e mais 13",
+    "numeroJogadores": 1,
+    "dataLancamento": "2019",
+    "genero": "ACAO",
+    "dadosRequisitosSistema": {
+		"sistemaOperacional": "Windows 10 - April 2018 Update (v1803)",
+		"processador": "Intel Core i7-4770k @ 3.4 GHz / AMD Ryzen 5 1500x",
+		"memoria": "12 GB",
+		"placaDeVideo": "Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB",
+		"armazenamento": "150 GB"
+	}
+}
+
+3º
+{
+    "titulo": "Forza Horizon 5",
+    "desenvolvedora": "Playground Games",
+    "distribuidora": "Xbox Game Studios",
+    "idiomas": "Português (Brasil), Inglês, Francês, Italiano, Alemão e mais 16",
+    "numeroJogadores": 1,
+    "dataLancamento": "2021",
+    "genero": "CORRIDA",
+    "dadosRequisitosSistema": {
+		"sistemaOperacional": "Windows 10 version 15063.0 or higher",
+		"processador": "Intel Core i5-8400 or AMD Ryzen 5 1500x",
+		"memoria": "16 GB",
+		"placaDeVideo": "Nvidia GeForce GTX 1070 or AMD RX 590",
+		"armazenamento": "110 GB"
+	}
+}
+
+4º
+{
+    "titulo": "F1® 22",
+    "desenvolvedora": "Codemasters",
+    "distribuidora": "Electronic Arts",
+    "idiomas": "Português (Brasil), Inglês, Francês, Italiano, Alemão e mais 11",
+    "numeroJogadores": 2,
+    "dataLancamento": "2022",
+    "genero": "CORRIDA",
+    "dadosRequisitosSistema": {
+		"sistemaOperacional": " Windows 10 64-bit (Version 1909) | For Ray Tracing or VR: Windows 10 64-bit (Version 2004)",
+		"processador": "Intel Core i5 9600K or AMD Ryzen 5 2600X",
+		"memoria": "16 GB",
+		"placaDeVideo": "NVIDIA GTX 1660 Ti or AMD RX 590 | For Ray Tracing: GeForce RTX 3070 or Radeon RX 6800 | For VR: NVIDIA RTX 2070 or AMD RX 6700 XT",
+		"armazenamento": "80 GB"
+	}
+}
+
+5º
+{
+    "titulo": "Assetto Corsa",
+    "desenvolvedora": "Kunos Simulazioni",
+    "distribuidora": "Kunos Simulazioni",
+    "idiomas": "Inglês, Italiano, Chinês simplificado e Chinês tradicional",
+    "numeroJogadores": 2,
+    "dataLancamento": "2014",
+    "genero": "SIMULADOR",
+    "dadosRequisitosSistema": {
+		"sistemaOperacional": "Windows 7 Sp1 - 8 - 8.1 - 10",
+		"processador": "AMD Six-Core CPU, Intel Quad-Core CPU",
+		"memoria": "6 GB",
+		"placaDeVideo": "DirectX 11 (e.g. AMD Radeon 290x, Nvidia GeForce GTX 970)",
+		"armazenamento": "30 GB"
+	}
+}
+

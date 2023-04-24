@@ -1,7 +1,9 @@
+// Higor Alves Santos RM93359
 package br.com.fiap.catalogojogos.controller;
 
 import br.com.fiap.catalogojogos.model.dto.AtualizarJogo;
 import br.com.fiap.catalogojogos.model.dto.CadastroJogo;
+import br.com.fiap.catalogojogos.model.dto.DeletarJogo;
 import br.com.fiap.catalogojogos.model.dto.ListagemJogo;
 import br.com.fiap.catalogojogos.service.JogoService;
 import jakarta.validation.Valid;
@@ -30,21 +32,21 @@ public class JogoController {
         return jogoService.listarTodosJogos(pageable);
     }
 
-    @PostMapping("/criar")
+    @PostMapping
     @Transactional
     public void criar(@RequestBody @Valid CadastroJogo cadastroJogo) {
         jogoService.salvarJogo(cadastroJogo);
     }
 
-    @PutMapping("/alterar")
+    @PutMapping
     @Transactional
-    public void alterar(@RequestBody AtualizarJogo atualizarJogo) {
+    public void alterar(@RequestBody @Valid AtualizarJogo atualizarJogo) {
         jogoService.atualizar(atualizarJogo);
     }
 
-    @DeleteMapping("/excluir/{id}")
+    @DeleteMapping
     @Transactional
-    public void excluir(@PathVariable Long id) {
-        jogoService.exclusaoLogica(id);
+    public void excluir(@RequestBody @Valid DeletarJogo jogo) {
+        jogoService.exclusaoLogica(jogo);
     }
 }
